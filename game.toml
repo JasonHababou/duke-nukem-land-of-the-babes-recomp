@@ -3,42 +3,42 @@
 
 [game]
 name = "Duke Nukem: Land of the Babes"
-id = "SLUS-01002"
+id = "SLES-03440"
 players = 1
-exe = "disc/SLUS_010.02"
-disc = "disc/Duke Nukem - Land of the Babes (USA).cue"
-discs = ["disc/Duke Nukem - Land of the Babes (USA).cue"]
-disc_serials = ["SLUS-01002"]
+exe = "disc/SLES_034.40"
+disc = "disc/Duke Nukem - Land of the Babes (France).cue"
+discs = ["disc/Duke Nukem - Land of the Babes (France).cue"]
+disc_serials = ["SLES-03440"]
 load_address = "0x80010000"
-entry_pc = "0x80059A64"
-text_size = "0x00067800"
+entry_pc = "0x800588E4"
+text_size = "0x00066000"
 stack_base = "0x801FFFF0"
 
 # Digests are for data Track 01 (first BINARY FILE / TRACK 01).
 [prepare_disc]
 out_dir = "disc"
-bin_name = "Duke Nukem - Land of the Babes (USA).bin"
-cue_name = "Duke Nukem - Land of the Babes (USA).cue"
-boot_exe = "SLUS_010.02"
-known_sizes = [707813232]
+bin_name = "Duke Nukem - Land of the Babes (France).bin"
+cue_name = "Duke Nukem - Land of the Babes (France).cue"
+boot_exe = "SLES_034.40"
+known_sizes = [690363744]
 known_md5 = [
-  "6de9cc987b6eba64adc5b578b5b8144c",
+  "845dba45093c7e3f63682430de531366",
 ]
 known_sha1 = [
-  "f57c49eac288225fe3602e279bc1379f72f7eea6",
+  "f729714b22664f1e3423edde14d4bd8c5defea81",
 ]
 known_crc32 = [
-  "47a7ab61",
+  "c61212f7",
 ]
 
 [recompiler]
 bios_config = "psxrecomp/bios/SCPH1001.toml"
-seeds = "seeds/ghidra_funcs.txt"
+seeds = "seeds/ghidra_funcs_fr.txt"
 out_dir = "generated"
 strict = true
 
 [runtime]
-openbios = false
+openbios = true
 bios_hle = false
 window_title = "duke-nukem-land-of-the-babes- Recompiled"
 memcard_dir = "saves"
@@ -56,4 +56,4 @@ default_mode = "digital"
 [netplay]
 require_cue = true
 required_tracks = 1
-required_disc_fp = "7be0d70755792e2d41c6a9cae3e3a8f2983317fcd82786f79fd4b1cd136ffd9a"
+required_disc_fp = "dde9e0dc46e46bbef3e22412032a48609a67018fdc75e94d86924d0d3ac65d11"

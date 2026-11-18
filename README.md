@@ -1,6 +1,25 @@
 <p align="center"><a href="https://alexbeavs-ps1-ports.github.io/psxrecomp-ports/"><img src="https://raw.githubusercontent.com/alexbeavs-ps1-ports/psxrecomp-ports/main/docs/assets/alexbeav-ps1-recomps-banner.png" alt="Alexbeav's PS1 Recomps" width="100%"></a></p>
 
 # Duke Nukem: Land of the Babes Recompiled
+
+> **Fork : version française (PAL) / French (PAL) release fork**
+>
+> Ce fork compile la version **française** du jeu (SLES-03440, `SLES_034.40`) au lieu de la version US (SLUS-01002).
+> Aucun fichier du jeu n'est inclus : il faut votre propre copie du disque.
+>
+> - Placez `Duke Nukem - Land of the Babes (France).cue` et son `.bin` (piste unique) dans `disc/`.
+> - `game.toml` est la configuration française ; la configuration US d'origine est conservée dans `game-us.toml`.
+> - La version PAL tourne en 50 Hz. Aucun BIOS n'est nécessaire : OpenBIOS (fourni, licence MIT) est utilisé par défaut.
+> - Construction :
+>   ```
+>   python psxrecomp/psxrecomp_cli.py generate --config game.toml --project-root . --disc "disc/Duke Nukem - Land of the Babes (France).cue"
+>   cmake -S . -B build-release -G Ninja -DCMAKE_BUILD_TYPE=Release
+>   cmake --build build-release --target psx-runtime
+>   ```
+>
+> This fork builds the **French** release (SLES-03440). Bring your own disc; no game data is included.
+> Tested on Windows 10 with MSYS2 MinGW-w64 gcc 15.2: boot, intro, title screen and attract mode in French.
+> Not affiliated with the upstream project.
 <!-- retcomm-readme-metrics -->
 [![GitHub downloads (all assets, all releases)](https://img.shields.io/github/downloads/Alexbeav/duke-nukem-land-of-the-babes-recomp/total)](https://github.com/Alexbeav/duke-nukem-land-of-the-babes-recomp/releases)
 [![GitHub downloads (latest release)](https://img.shields.io/github/downloads/Alexbeav/duke-nukem-land-of-the-babes-recomp/latest/total)](https://github.com/Alexbeav/duke-nukem-land-of-the-babes-recomp/releases/latest)
